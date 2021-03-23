@@ -1,0 +1,3 @@
+<view class="metreci-avatar">
+  <slot></slot>
+</view>
