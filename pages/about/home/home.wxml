@@ -1,2 +1,5 @@
 <!--pages/about/home/home.wxml-->
 <text>pages/about/home/home.wxml</text>
+<Avatar>
+  <view>a</view>
+</Avatar>
