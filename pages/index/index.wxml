@@ -1,6 +1,9 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
+<Home wx:if="{{pageCur===0}}"/>
+<About wx:if="{{pageCur===1}}"/>
+<TabBar pageCur="{{pageCur}}" list="{{list}}" bind:change="pageChange"/>
+
+  <!-- <view class="userinfo">
     <block wx:if="{{canIUseOpenData}}" calss="userinfo-opendata">
       <view class="userinfo-avatar" bindtap="bindViewTap">
         <open-data type="userAvatarUrl"></open-data>
@@ -19,6 +22,4 @@
   </view>
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
-  </view>
-  <TabBar list="{{list}}"/>
-</view>
+  </view> -->

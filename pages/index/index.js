@@ -4,11 +4,11 @@ const app = getApp()
 
 Page({
   data: {
+    pageCur:0,
     list: [
-      {text: '主页', src: '../../images/about.png', activeSrc: '../../images/about_cur.png'},
+      {text: '主页', src: '../../images/about.png', activeSrc: '../../images/about_cur.png',badge:2003},
       {text: '我的', src: '../../images/basics.png', activeSrc: '../../images/basics_cur.png'}
     ],
-    motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
@@ -20,6 +20,13 @@ Page({
     wx.navigateTo({
       url: '../logs/logs'
     })
+  },
+  pageChange(item){
+    const curPage = item.detail.index
+    this.setData({
+      pageCur:curPage
+    })
+    console.log(item,this.data.pageCur)
   },
   onLoad() {
     if (wx.getUserProfile) {
