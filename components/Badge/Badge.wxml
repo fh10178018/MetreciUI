@@ -1,0 +1,2 @@
+<!--components/Badge/Badge.wxml-->
+<view class="metreci-tag metreci-badge {{content===''?'none':''}}">{{content}}</view>
