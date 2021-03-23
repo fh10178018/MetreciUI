@@ -1,9 +1,14 @@
 <view class="{{className+' metreci-tabbar footer bg-color'}}">
-  <view class="metreci-tabbar-item {{pageCur===index?'active':''}}" wx:for="{{list}}" wx:key="index" bindtap="tabChange" data-index="{{index}}">
+  <view 
+  class="metreci-tabbar-item {{pageCur===index?'active':''}}" 
+  wx:for="{{list}}" 
+  wx:key="index"
+  bindtap="tabChange"
+  data-index="{{index}}">
     <view class="icon">
       <image class="img" src="{{pageCur===index?item.activeSrc:item.src}}" />
-      <view class="badge">23</view>
+      <view class="badge">{{item.badge}}</view>
     </view>
-    <text class="{{pageCur===index?'text-primary':'text-gray'}}">{{item.text}}</text>
+    <text class="text-gray">{{item.text}}</text>
   </view>
 </view>
