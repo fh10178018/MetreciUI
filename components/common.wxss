@@ -1,0 +1,85 @@
+
+page {
+--primary-color: #ff5757;
+--primary-color-light: tint(--mater-color,10%);
+--main-background-color: whitesmoke;
+--background-color: #fff;
+--black-shadow:rgba(26, 26, 26, 0.2);
+--gray: #aaaaaa;
+  background-color: var(--main-background-color);
+}
+
+.bg-color{
+    background-color: var(--background-color);
+}
+
+.text-primary{
+    color: var(--primary-color);
+}
+
+.text-gray{
+    color: var(--gray);
+}
+
+/**
+  * ———————start————————
+  * tabbar相关样式
+  */
+.metreci-tabbar{
+  display: flex;
+  position: relative;
+  align-items: center;
+  min-height: 100rpx;
+  justify-content: space-between;
+  width: 100%;
+  box-shadow: 0 1rpx 6rpx var(--black-shadow);
+}
+.metreci-tabbar.footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+}
+.metreci-tabbar .icon{
+  margin: 0 auto;
+}
+.metreci-tabbar .icon>image {
+  width: 50rpx;
+  height: 50rpx;
+  display: inline-block;
+}
+.metreci-tabbar .icon>.badge {
+  position: absolute;
+  background-color: #ff5757;
+  color: white;
+  border-radius: 15px;
+  line-height: 30rpx;
+  width: 50rpx;
+  height: 30rpx;
+  vertical-align: middle;
+  text-align: center;
+  display: inline-block;
+}
+.metreci-tabbar>.metreci-tabbar-item {
+    font-size: 22rpx;
+    position: relative;
+    flex: 1;
+    text-align: center;
+    padding: 0;
+    display: block;
+    height: auto;
+    line-height: 1;
+    margin: 0;
+    justify-content: center;
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+}
+.metreci-tabbar>.metreci-tabbar-item.active {
+
+}
+/**
+  * ———————end————————
+  * tabbar相关样式
+  */
