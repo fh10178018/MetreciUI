@@ -7,7 +7,7 @@
   data-index="{{index}}">
     <view class="icon">
       <image class="img" src="{{pageCur===index?item.activeSrc:item.src}}" />
-      <view class="badge">{{item.badge}}</view>
+      <Badge content="{{item.badge}}" />
     </view>
     <text class="text-gray">{{item.text}}</text>
   </view>
