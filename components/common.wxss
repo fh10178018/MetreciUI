@@ -42,30 +42,15 @@ page {
   z-index: 200;
 }
 .metreci-tabbar .icon{
-  margin: 0 auto;
+  width: auto;
+  height: auto;
+  display: inline-block;
+  position: relative;
 }
 .metreci-tabbar .icon>image {
   width: 50rpx;
   height: 50rpx;
   display: inline-block;
-}
-.metreci-tabbar .icon>.badge {
-  padding: 0rpx 10rpx;
-  position: absolute;
-  top: -5rpx;
-  left: 55%;
-  background-color: #ff5757;
-  color: var(--background-color);
-  border-radius: 15px;
-  line-height: 30rpx;
-  max-width: 50rpx;
-  min-height: 20rpx;
-  vertical-align: middle;
-  text-align: center;
-  display: inline-block;
-  white-space: nowrap;
-	overflow: hidden;		
-	text-overflow: ellipsis;
 }
 .metreci-tabbar>.metreci-tabbar-item {
     font-size: 22rpx;
@@ -73,8 +58,8 @@ page {
     flex: 1;
     text-align: center;
     padding: 0;
-    display: block;
-    height: auto;
+    display: flex;
+    flex-direction: column;
     line-height: 1;
     margin: 0;
     justify-content: center;
@@ -101,6 +86,51 @@ page {
 }
 
 /**
-  * ———————end————————
   * tabbar相关样式
+  * ———————end————————
+  * 
+  * ———————start———————
+  * tag样式
   */
+  .metreci-tag {
+    font-size: 24rpx;
+    vertical-align: middle;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0rpx 16rpx;
+    height: 48rpx;
+    font-family: Helvetica Neue, Helvetica, sans-serif;
+    white-space: nowrap;
+  }
+/**
+  * tag样式
+  * ———————end————————
+  * 
+  * ———————start————————
+  * Badge相关样式
+  */
+  .metreci-badge {
+    border-radius: 200rpx;
+    position: absolute;
+    top: -10rpx;
+    left: calc(100% - 5px);
+    font-size: 20rpx;
+    padding: 0 10rpx;
+    height: 28rpx;
+    line-height: 28rpx;
+    color: var(--background-color);
+    background-color: #dd514c;
+  }
+  .metreci-badge.none {
+    border-radius: 200rpx;
+    height: 20rpx;
+    left: calc(100% - 4px);
+  }
+/**
+  * ———————end————————
+  * Badge相关样式
+  */
+
