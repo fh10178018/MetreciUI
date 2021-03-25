@@ -1,4 +1,4 @@
-<view class="{{className+' metreci-tabbar footer bg-color'}}">
+<view class="{{className+' metreci-tabbar footer bg-color shadow'}}">
   <view 
   class="metreci-tabbar-item {{pageCur===index?'active':''}}" 
   wx:for="{{list}}" 
