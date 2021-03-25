@@ -1,3 +1,4 @@
-<view class="metreci-avatar">
+<view class="metreci-avatar {{size + (isRound?' round':'')}}" style="background-image:url({{imageSrc}})">
   <slot></slot>
+  <!-- <Badge wx:if="showSex" content="12"></Badge> -->
 </view>

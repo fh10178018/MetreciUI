@@ -1,1 +1,1 @@
-/* components/Avatar/Avatar.wxss */
+@import "../common.wxss";

@@ -9,7 +9,9 @@ Component({
       default:'normal'
     },
     imageSrc:String, // 背景图路径
-    isRound:Boolean // 边缘是园的
+    isRound:Boolean, // 边缘是园的
+    showSex:Boolean, // 是否展示性别
+    isBoy:Boolean // 是男孩吗，不是则为女孩
   },  
 
   /**
