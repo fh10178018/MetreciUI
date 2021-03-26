@@ -3,14 +3,14 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/about/home/home",
-    "pages/home/home/home"
+    "pages/home/home/home",
+    "pages/payment/payment"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
+    "navigationStyle": "custom",
     "navigationBarTextStyle": "black"
   },
-  "style": "v2",
   "sitemapLocation": "sitemap.json"
 }
