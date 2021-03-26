@@ -1,0 +1,11 @@
+<view class="{{className+' metreci-tabbar header bg-color shadow'}}" style="padding-top:{{statusBarHeight}}px;height:{{appBar.height}}px;padding-right:{{appBar.paddingRight}}px;">
+  <view class="action">
+    <MetreciButton wx:if="{{$slots.$default || haveBack}}" type="text" style="height:{{appBar.height}}px;font-size: 32rpx;" bindtap="goBack  ">
+      <text class="iconfont icon-arrow-left-bold"></text>
+    </MetreciButton>
+    <slot></slot>
+  </view>
+  <view wx:if="content" class="content" style="line-height:{{appBar.height}}px;top:{{statusBarHeight}}px;">
+    {{content}}
+  </view>
+</view>
