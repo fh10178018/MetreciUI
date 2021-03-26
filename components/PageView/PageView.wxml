@@ -1,0 +1,15 @@
+<!--components/PageView/PageView.wxml-->
+<scroll-view
+  scroll-y style="width: 100%; height: auto; padding-top: {{paddingTop}}px;font-size: 28rpx;"
+  refresher-enabled="{{showRefresh}}"
+  refresher-threshold="{{100}}"
+  refresher-default-style="white"
+  refresher-background="lightgreen"
+  refresher-triggered="{{triggered}}"
+  bindrefresherpulling="onPulling"
+  bindrefresherrefresh="onRefresh"
+  bindrefresherrestore="onRestore"
+  bindrefresherabort="onAbort"
+>
+  <slot></slot>
+</scroll-view>
