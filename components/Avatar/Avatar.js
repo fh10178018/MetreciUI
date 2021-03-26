@@ -6,7 +6,7 @@ Component({
   properties: {
     size:{ // 头像大小
       type:String,
-      default:'normal'
+      value:'normal'
     },
     imageSrc:String, // 背景图路径
     isRound:Boolean, // 边缘是园的
