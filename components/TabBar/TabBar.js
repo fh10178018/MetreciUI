@@ -18,7 +18,8 @@ Component({
     list: {
       type: Array,
       value: []
-    }
+    },
+    style:String
   },
   /**
    * tabChange: tab点击触发函数

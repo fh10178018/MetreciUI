@@ -1,5 +1,6 @@
-<view class="{{className+' metreci-tabbar footer bg-color shadow'}}">
+<view class="{{className+' metreci-tabbar footer bg-color shadow text-df'}}" style="{{style}}">
   <view 
+  wx:if="$slots.$default"
   class="metreci-tabbar-item {{pageCur===index?'active':''}}" 
   wx:for="{{list}}" 
   wx:key="index"
@@ -11,4 +12,5 @@
     </view>
     <text class="text-gray">{{item.text}}</text>
   </view>
+  <slot></slot>
 </view>
