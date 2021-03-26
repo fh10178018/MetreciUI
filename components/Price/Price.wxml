@@ -1,0 +1,3 @@
+<view class="text-price text-xxl text-red">
+  ￥<slot></slot>
+</view>
