@@ -1,16 +1,44 @@
 
+@import "./Icon/stylesheet.wxss";
 page {
---primary-color: #ff5757;
---primary-color-light: tint(--mater-color,10%);
---main-background-color: whitesmoke;
---background-color: #fff;
---black-shadow:rgba(26, 26, 26, 0.2);
---gray: #aaaaaa;
+  --primary-color: #ff5757;
+  --primary-color-light: tint(--mater-color,10%);
+  --main-background-color: whitesmoke;
+  --background-color: #fff;
+  --black-shadow:rgba(26, 26, 26, 0.2);
+  --black:#131313;
+  --gray: #aaaaaa;
+  --yellow-light:#fad667;
+  --yellow:#f9c41e;
+  --brown:#653603;
+  --red:#ff5757;
   background-color: var(--main-background-color);
+}
+
+.flex{
+  display: flex;
+}
+.flex.row{
+  flex-direction: row;
+}
+.flex.column{
+  flex-direction: column;
 }
 
 .bg-color{
     background-color: var(--background-color);
+}
+.bg-yellow{
+  background-color: var(--yellow);
+  color: white;
+}
+.bg-yellow-light{
+  background-color: var(--yellow-light);
+  color: white;
+}
+.bg-yellow-gradient{
+  background: linear-gradient(to right,var(--yellow-light), var(--yellow));
+  color: var(--black);
 }
 
 .text-primary{
@@ -20,8 +48,58 @@ page {
 .text-gray{
     color: var(--gray);
 }
+.text-red{
+  color:var(--red);
+}
+.shadow{
+  box-shadow: 0 1rpx 6rpx var(--black-shadow);
+}
+.text-bold{
+  font-weight: bold;
+}
 
 /**
+  * ———————start————————
+  * 文本大小相关样式
+  */
+.text-xs {
+	font-size: 20rpx;
+}
+
+.text-sm {
+	font-size: 24rpx;
+}
+
+.text-df {
+	font-size: 28rpx;
+}
+
+.text-lg {
+	font-size: 32rpx;
+}
+
+.text-xl {
+	font-size: 36rpx;
+}
+
+.text-xxl {
+	font-size: 44rpx;
+}
+
+.text-sl {
+	font-size: 80rpx;
+}
+
+.text-xsl {
+	font-size: 120rpx;
+}
+.text-price{
+  display: inline-block;
+}
+/**
+  * 文本相关样式
+  * ———————end————————
+  *
   * ———————start————————
   * tabbar相关样式
   */
@@ -31,8 +109,6 @@ page {
   align-items: center;
   min-height: 100rpx;
   justify-content: space-between;
-  width: 100%;
-  box-shadow: 0 1rpx 6rpx var(--black-shadow);
 }
 .metreci-tabbar.footer{
   position: fixed;
@@ -40,6 +116,28 @@ page {
   left: 0;
   right: 0;
   z-index: 200;
+}
+.metreci-tabbar.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+}
+.metreci-tabbar.header>.content{
+  position: absolute;
+  margin: 0 auto;
+  top: 20px;
+  width:  calc(100% - 440rpx);
+  text-align: center;
+  font-size: 32rpx;
+  cursor: none;
+  pointer-events: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  left: 0;
+  right: 0;
 }
 .metreci-tabbar .icon{
   width: auto;
@@ -53,19 +151,19 @@ page {
   display: inline-block;
 }
 .metreci-tabbar>.metreci-tabbar-item {
-    font-size: 22rpx;
-    position: relative;
-    flex: 1;
-    text-align: center;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    line-height: 1;
-    margin: 0;
-    justify-content: center;
-    max-width: 100%;
-    align-items: center;
-    text-align: center;
+  font-size: 22rpx;
+  position: relative;
+  flex: 1;
+  text-align: center;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  margin: 0;
+  justify-content: center;
+  max-width: 100%;
+  align-items: center;
+  text-align: center;
 }
 .metreci-tabbar>.metreci-tabbar-item.active>.icon {
   animation:ZoomInAndOut 500ms;
@@ -115,8 +213,8 @@ page {
   .metreci-badge {
     border-radius: 200rpx;
     position: absolute;
-    top: -10rpx;
-    left: calc(100% - 5px);
+    top: -4rpx;
+    left: calc(100% - 24rpx);
     font-size: 20rpx;
     padding: 0 10rpx;
     height: 28rpx;
@@ -130,7 +228,124 @@ page {
     left: calc(100% - 4px);
   }
 /**
-  * ———————end————————
   * Badge相关样式
+  * ———————end————————
+  * 
+  * ———————start————————
+  * avatar相关样式
+  */
+.metreci-avatar{
+  display: inline-block;
+  color: var(--background-color);
+  background-color:var(--primary-color);
+  text-align: center;
+  vertical-align: center;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.metreci-avatar.large{
+  width: 128rpx;
+  height: 128rpx;
+  font-size: 2.5em;
+}
+.metreci-avatar.normal{
+  width: 96rpx;
+  height: 96rpx;
+  font-size: 2em;
+}
+.metreci-avatar.supersize{
+  width: 160rpx;
+  height: 160rpx;
+  font-size: 3em;
+}
+.metreci-avatar.small{
+  width: 64rpx;
+  height: 64rpx;
+  font-size: 1.5em;
+}
+.metreci-avatar.tiny{
+  width: 48rpx;
+  height: 48rpx;
+  font-size: 1em;
+}
+.metreci-avatar.round{
+  border-radius: 50%;
+}
+/**
+  * avatar相关样式
+  * ———————end————————
+  * 
+  * ———————start————————
+  * Button相关样式
+  */
+.metreci-btn{
+  position: relative;
+  border: 0rpx;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  font-weight: 500;
+  width: auto;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  overflow: visible;
+  margin-left: initial;
+  transform: translate(0rpx, 0rpx);
+  margin-right: initial;
+  transition:500ms;
+}
+.metreci-btn::after{
+  border: none !important;
+}
+.metreci-btn.round{
+  border-radius: 200rpx;
+}
+.metreci-btn.text{
+  background-color:transparent;
+}
+.metreci-btn.large{
+  padding: 0 40rpx;
+  height: 80rpx;
+}
+.metreci-btn.normal{
+  padding: 0 30rpx;
+  height: 64rpx;
+}
+.metreci-btn.small{
+  padding: 0 20rpx;
+  height: 48rpx;
+}
+.metreci-btn.large.loading{
+  width: 50rpx;
+}
+/**
+  * Button相关样式
+  * ———————end————————
+  * 
+  * ———————start————————
+  * Card相关样式
   */
 
+  .metreci-card{
+    display: block;
+    overflow: hidden;
+    padding:0 30rpx;
+    font-size: inherit;
+  }
+  .metreci-card.is-card{
+    margin: 30rpx;
+    border-radius: 5rpx;
+  }
+/**
+  * Card相关样式
+  * ———————end————————
+  * 
+  * ———————start————————
+  * viewPage相关样式
+  */
+  .metreci-page{
+    font-size: 28rpx;
+  }

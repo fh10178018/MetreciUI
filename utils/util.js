@@ -1,12 +1,20 @@
-const formatTime = date => {
-  const year = date.getFullYear()
-  const month = date.getMonth() + 1
-  const day = date.getDate()
-  const hour = date.getHours()
-  const minute = date.getMinutes()
-  const second = date.getSeconds()
-
-  return `${[year, month, day].map(formatNumber).join('/')} ${[hour, minute, second].map(formatNumber).join(':')}`
+const getFormat = msec => {
+  let ss = parseInt(msec / 1000);
+  let ms = parseInt(msec % 1000);
+  let mm = 0;
+  let hh = 0;
+  if (ss > 60) {
+  mm = parseInt(ss / 60);
+  ss = parseInt(ss % 60);
+  if (mm > 60) {
+  hh = parseInt(mm / 60);
+  mm = parseInt(mm % 60);
+  }
+  }
+  ss = ss > 9 ? ss : `0${ss}`;
+  mm = mm > 9 ? mm : `0${mm}`;
+  hh = hh > 9 ? hh : `0${hh}`;
+  return { ss, mm, hh };
 }
 
 const formatNumber = n => {
@@ -15,5 +23,5 @@ const formatNumber = n => {
 }
 
 module.exports = {
-  formatTime
+  getFormat
 }

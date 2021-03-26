@@ -4,7 +4,7 @@ const app = getApp()
 
 Page({
   data: {
-    pageCur:0,
+    pageCur:1,
     list: [
       {text: '主页', src: '../../images/about.png', activeSrc: '../../images/about_cur.png',badge:2003},
       {text: '我的', src: '../../images/basics.png', activeSrc: '../../images/basics_cur.png'}
