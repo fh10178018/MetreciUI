@@ -1,0 +1,3 @@
+<view class="metreci-card bg-color {{isCard?'is-card':''}}">
+  <slot></slot>
+</view>
