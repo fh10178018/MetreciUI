@@ -1,5 +1,39 @@
-<!--pages/about/home/home.wxml-->
-<text>pages/about/home/home.wxml</text>
-<Avatar>
-  <view>a</view>
-</Avatar>
+<view class="box flex padding-t-b">
+  <view class="flex-1">
+    <Avatar size="supersize" imageSrc="https://ossweb-img.qq.com/images/lol/web201310/skin/big25002.jpg" isRound />
+  </view>
+  <view class="flex-2">
+    <text class="strong">登录携程</text>
+    <text class="strong">开启旅程</text>
+    <text class="small text-gray">成为携程会员，一次说走就走的旅行</text>
+    <text class="small text-gray">专属体验和个性激励等丰富福利</text>
+    <button>注册登录</button>
+  </view>
+</view>
+
+<view class="box padding-t-b" style="margin-bottom:0">
+  <view class="menu flex space-between">
+    <view class="menu-item column text-center"><text class="iconfont icon-map"></text><text class="title">全部订单</text></view>
+    <view class="menu-item column text-center"><text class="iconfont icon-map"></text><text class="title">待付款</text></view>
+    <view class="menu-item column text-center"><text class="iconfont icon-map"></text><text class="title">未出行</text></view>
+  </view>
+</view>
+<view class="box">
+  <view class="box-item">
+    <view class="action">优惠券</view> 
+    <text class="arrow iconfont icon-arrow-right"></text>
+  </view>
+  <view class="box-item">
+    <view class="action">我的特权</view> 
+    <text class="arrow iconfont icon-arrow-right"></text>
+  </view>
+</view>
+<view class="box">
+  <view class="card flex">
+    <view class="flex-1"><Avatar size="normal" isRound><text class="iconfont icon-customer-service"></text></Avatar></view>
+    <view class="flex-2 flex column">
+      <view class="flex-1">存在问题</view>
+      <view class="flex-1"><button>去咨询<text class="iconfont icon-arrow-right"></text></button></view>
+    </view>
+  </view>
+</view>

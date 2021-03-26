@@ -1,1 +1,91 @@
 /* pages/about/home/home.wxss */
+@import "../../../components/common.wxss";
+
+.box{
+  overflow: hidden;
+  background-color: var(--background-color);
+  padding: 0 20rpx;
+  margin-bottom: 20rpx;
+}
+.padding-t-b{
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+}
+.flex{
+  display: flex;
+}
+.menu{
+  width: 100%;
+}
+.flex>.flex-1{
+  flex:1;
+  display: flex;
+  justify-content: center;
+}
+.flex .row{
+  flex-direction: row;
+}
+.flex .column{
+  flex-direction: column;
+}
+.text-center{
+  text-align: center;
+}
+.flex>.flex-2{
+  flex:2;
+  display: flex;
+  flex-direction: column;
+}
+.box .strong{
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.box .small{
+  padding-top: 10rpx;
+  font-size: 0.5rem;
+}
+.box button{
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 200rpx;
+  padding: 18rpx 35rpx;
+  width: auto;
+  display: inline-block;
+  margin-left: 0;
+  margin-top: 25rpx;
+}
+
+.menu .title{
+  margin-top: 10rpx;
+  font-size: 0.5rem;
+}
+.menu>.menu-item{
+  display: flex;
+  padding:0 30rpx;
+}
+.box-item {
+  padding:0 30rpx;
+  position: relative;
+  font-size:0.5rem;
+}
+.box-item>.arrow {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+.box-item>.action{
+  padding:30rpx 0;
+  border: 0.5rpx solid transparent;
+  border-color:whitesmoke transparent transparent transparent;
+}
+.space-between{
+  justify-content: space-between;
+  width: auto;
+}
+.card{
+  padding:20rpx;
+  margin: 50rpx 20rpx;
+  border-radius: 15rpx;
+  box-shadow: 0 1rpx 30rpx var(--black-shadow);
+}
