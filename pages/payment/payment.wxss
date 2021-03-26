@@ -1,0 +1,58 @@
+@import '../../components/common.wxss';
+.sum-price{
+  display: inline-block;
+  height: auto;
+  margin-right: 25rpx;
+  transition: 500ms;
+}
+
+.divider{
+  position: relative;
+  width: 100%;
+  height: 150rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.divider::after{
+  z-index: 1;
+  content:'';
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  border-top:5rpx solid var(--gray);
+}
+.divider>.icon-plane{
+  z-index: 3;
+  padding: 35rpx;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 58rpx;
+  background-color: white;
+  color:var(--gray);
+}
+.divider .to{
+  margin-top: 10rpx;
+  padding-left: 35rpx;
+  background-color: white;
+  z-index: 2;
+}
+.divider .from{
+  margin-top: 10rpx;
+  padding-right: 35rpx;
+  background-color: white;
+  z-index: 2;
+}
+.divider .to view{
+  text-align: right;
+}
+.action-pay{
+  padding-right: 8px;
+  margin: 6px 0;
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items:flex-end;
+  margin:15rpx 25rpx;
+}

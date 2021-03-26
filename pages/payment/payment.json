@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "AppBar": "../../components/AppBar/AppBar",
+    "Card": "../../components/Card/Card",
+    "PageView": "../../components/PageView/PageView",
+    "TabBar": "../../components/TabBar/TabBar",
+    "MyButton": "../../components/Button/Button",
+    "Price": "../../components/Price/Price",
+    "Loading": "../../components/Loading/Loading"
+  }
+}

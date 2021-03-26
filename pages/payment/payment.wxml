@@ -1,0 +1,36 @@
+<AppBar content="确认订单"></AppBar>
+<PageView showRefresh="true">
+  <Card isCard>
+    <view class="divider">
+      <view class="from">
+        <view class="text-gray">上海</view>
+        <view class="text-xxl text-bold">6：20</view>
+        <view class="text-gray">Jun 12</view>
+      </view>
+      <view class="iconfont icon-plane"></view>
+      <view class="to">
+        <view class="text-gray">上海</view>
+        <view class="text-xxl text-bold">6：20</view>
+        <view class="text-gray">Jun 12</view>
+      </view>
+    </view>
+  </Card>
+</PageView>
+<TabBar >
+  <view class="action-pay">
+    <view class="flex column">
+      <view class="sum-price">
+        <text>合计</text><Price>322</Price>
+      </view>
+      <view class="text-gray text-xs">已经优惠：2323</view>
+    </view>
+
+    <MyButton bindtap="handleClick" bg-color="yellow-gradient" isLoading="{{isLoading}}" isRound size="large">
+      <view class="flex column"> 
+        <text class="text-bold">立即支付</text>
+        <text class="text-xs" style="padding-top:10rpx">剩余时间：{{stringTime}}</text>
+      </view>
+    </MyButton>
+  </view>
+
+</TabBar>
