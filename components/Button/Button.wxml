@@ -1,0 +1,8 @@
+<!--components/Button/Button.wxml-->
+<button
+ class="metreci-btn {{isText?'text':''}} {{size}} bg-{{bgColor}} {{isRound?'round':''}} {{textSize}} {{isLoading?'loading':''}}" 
+ disabled="{{isLoading||disabled}}"
+  style="{{style}} width:{{!isLoading?width:height}};">
+  <Loading wx:if="{{isLoading}}"></Loading>
+  <slot wx:if="{{!isLoading}}"></slot>
+</button>
